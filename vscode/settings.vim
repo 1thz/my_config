@@ -32,6 +32,9 @@ command! -complete=file -nargs=? Vnew call <SID>split('v', '__vscode_new__')
 command! -bang Only if <q-bang> == '!' | call <SID>closeOtherEditors() | else | call VSCodeNotify('workbench.action.joinAllGroups') | endif
 command! Other call <SID>closeOtherEditorsInGroup()
 
+" nnoremap => Normal Mode
+" xnoremap => Visual Mode
+
 nnoremap <silent> <C-w>s :call <SID>split('h')<CR>
 xnoremap <silent> <C-w>s :call <SID>split('h')<CR>
 
@@ -43,6 +46,12 @@ xnoremap <silent> <C-w>n :call <SID>splitNew('h', '__vscode_new__')<CR>
 
 nnoremap <silent> <C-w>= :<C-u>call VSCodeNotify('workbench.action.evenEditorWidths')<CR>
 xnoremap <silent> <C-w>= :<C-u>call VSCodeNotify('workbench.action.evenEditorWidths')<CR>
+
+nnoremap O :call VSCodeNotify('editor.action.insertLineBefore')<CR>i
+xnoremap O :call VSCodeNotify('editor.action.insertLineBefore')<CR>i
+
+nnoremap o :call VSCodeNotify('editor.action.insertLineAfter')<CR>i
+xnoremap o :call VSCodeNotify('editor.action.insertLineAfter')<CR>i
 
 " Better Navigation
 nnoremap <silent> <C-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
