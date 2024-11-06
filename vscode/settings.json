@@ -1,0 +1,616 @@
+// This file consists of these categories of settings:
+// 1. Keybindings and Terminal related
+// 2. VSCode shipped settings
+// 3. Language-specific settings
+// 4. Extensions related settings goes here
+{
+    // 1. Keybindings/NV related
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+    "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\huizh\\.config\\nvim\\init.vim",
+    "vscode-neovim.neovimExecutablePaths.linux": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "whichkey.sortOrder": "alphabetically",
+    "whichkey.bindings": [
+        {
+            "key": "b",
+            "name": "Buffers/Editors...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "b",
+                    "name": "Show all buffers/editors",
+                    "type": "command",
+                    "command": "workbench.action.showAllEditors"
+                },
+                {
+                    "key": "d",
+                    "name": "Close active editor",
+                    "type": "command",
+                    "command": "workbench.action.closeActiveEditor"
+                },
+                {
+                    "key": "h",
+                    "name": "Move editor into left group",
+                    "type": "command",
+                    "command": "workbench.action.moveEditorToLeftGroup"
+                },
+                {
+                    "key": "j",
+                    "name": "Move editor into below group",
+                    "type": "command",
+                    "command": "workbench.action.moveEditorToBelowGroup"
+                },
+                {
+                    "key": "k",
+                    "name": "Move editor into above group",
+                    "type": "command",
+                    "command": "workbench.action.moveEditorToAboveGroup"
+                },
+                {
+                    "key": "l",
+                    "name": "Move editor into right group",
+                    "type": "command",
+                    "command": "workbench.action.moveEditorToRightGroup"
+                },
+                {
+                    "key": "m",
+                    "name": "Close other editors",
+                    "type": "command",
+                    "command": "workbench.action.closeOtherEditors"
+                },
+                {
+                    "key": "n",
+                    "name": "Next editor",
+                    "type": "command",
+                    "command": "workbench.action.nextEditor"
+                },
+                {
+                    "key": "p",
+                    "name": "Previous editor",
+                    "type": "command",
+                    "command": "workbench.action.previousEditor"
+                },
+                {
+                    "key": "N",
+                    "name": "New untitled editor",
+                    "type": "command",
+                    "command": "workbench.action.files.newUntitledFile"
+                },
+                {
+                    "key": "u",
+                    "name": "Reopen closed editor",
+                    "type": "command",
+                    "command": "workbench.action.reopenClosedEditor"
+                },
+                {
+                    "key": "y",
+                    "name": "Copy buffer to clipboard",
+                    "type": "commands",
+                    "commands": [
+                        "editor.action.selectAll",
+                        "editor.action.clipboardCopyAction",
+                        "cancelSelection"
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "e",
+            "name": "Window...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "=",
+                    "name": "Reset editor group sizes",
+                    "type": "command",
+                    "command": "workbench.action.evenEditorWidths"
+                },
+                {
+                    "key": "h",
+                    "name": "Move editor group left",
+                    "type": "command",
+                    "command": "workbench.action.moveActiveEditorGroupLeft"
+                },
+                {
+                    "key": "j",
+                    "name": "Move editor group down",
+                    "type": "command",
+                    "command": "workbench.action.moveActiveEditorGroupDown"
+                },
+                {
+                    "key": "k",
+                    "name": "Move editor group up",
+                    "type": "command",
+                    "command": "workbench.action.moveActiveEditorGroupUp"
+                },
+                {
+                    "key": "l",
+                    "name": "Move editor group right",
+                    "type": "command",
+                    "command": "workbench.action.moveActiveEditorGroupRight"
+                },
+                {
+                    "key": "z",
+                    "name": "Combine all editors",
+                    "type": "command",
+                    "command": "workbench.action.joinAllGroups"
+                },
+                {
+                    "key": "x",
+                    "name": "Close editor group",
+                    "type": "command",
+                    "command": "workbench.action.closeEditorsInGroup"
+                },
+                {
+                    "key": "q",
+                    "name": "Close all editor groups",
+                    "type": "command",
+                    "command": "workbench.action.closeAllGroups"
+                }
+            ]
+        },
+        {
+            "key": "d",
+            "name": "Debug...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "d",
+                    "name": "Start debug",
+                    "type": "command",
+                    "command": "workbench.action.debug.start"
+                },
+                {
+                    "key": "S",
+                    "name": "Stop debug",
+                    "type": "command",
+                    "command": "workbench.action.debug.stop"
+                },
+                {
+                    "key": "c",
+                    "name": "Continue debug",
+                    "type": "command",
+                    "command": "workbench.action.debug.continue"
+                },
+                {
+                    "key": "p",
+                    "name": "Pause debug",
+                    "type": "command",
+                    "command": "workbench.action.debug.pause"
+                },
+                {
+                    "key": "r",
+                    "name": "Run without debugging",
+                    "type": "command",
+                    "command": "workbench.action.debug.run"
+                },
+                {
+                    "key": "R",
+                    "name": "Restart debug",
+                    "type": "command",
+                    "command": "workbench.action.debug.restart"
+                },
+                {
+                    "key": "i",
+                    "name": "Step into",
+                    "type": "command",
+                    "command": "workbench.action.debug.stepInto"
+                },
+                {
+                    "key": "s",
+                    "name": "Step over",
+                    "type": "command",
+                    "command": "workbench.action.debug.stepOver"
+                },
+                {
+                    "key": "o",
+                    "name": "Step out",
+                    "type": "command",
+                    "command": "workbench.action.debug.stepOut"
+                },
+                {
+                    "key": "b",
+                    "name": "Toggle breakpoint",
+                    "type": "command",
+                    "command": "editor.debug.action.toggleBreakpoint"
+                },
+                {
+                    "key": "B",
+                    "name": "Toggle inline breakpoint",
+                    "type": "command",
+                    "command": "editor.debug.action.toggleInlineBreakpoint"
+                },
+                {
+                    "key": "j",
+                    "name": "Jump to cursor",
+                    "type": "command",
+                    "command": "debug.jumpToCursor"
+                },
+                {
+                    "key": "v",
+                    "name": "REPL",
+                    "type": "command",
+                    "command": "workbench.debug.action.toggleRepl"
+                },
+                {
+                    "key": "w",
+                    "name": "Focus on watch window",
+                    "type": "command",
+                    "command": "workbench.debug.action.focusWatchView"
+                },
+                {
+                    "key": "W",
+                    "name": "Add to watch",
+                    "type": "command",
+                    "command": "editor.debug.action.selectionToWatch"
+                }
+            ]
+        },
+        {
+            "key": "f",
+            "name": "Find & Replace...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "File",
+                    "type": "command",
+                    "command": "editor.action.startFindReplaceAction"
+                },
+                {
+                    "key": "s",
+                    "name": "Symbol",
+                    "type": "command",
+                    "command": "editor.action.rename",
+                    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+                },
+                {
+                    "key": "p",
+                    "name": "Project",
+                    "type": "command",
+                    "command": "workbench.action.replaceInFiles"
+                }
+            ]
+        },
+        {
+            "key": "g",
+            "name": "Git...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "d",
+                    "name": "Delete Branch",
+                    "type": "command",
+                    "command": "git.deleteBranch"
+                },
+                {
+                    "key": "f",
+                    "name": "Fetch",
+                    "type": "command",
+                    "command": "git.fetch"
+                },
+                {
+                    "key": "v",
+                    "name": "View Unstaged Changes",
+                    "type": "command",
+                    "command": "git.viewChanges"
+                },
+                {
+                    "key": "V",
+                    "name": "View Staged Changes",
+                    "type": "command",
+                    "command": "git.viewStagedChanges"
+                },
+                {
+                    "key": "s",
+                    "name": "Stage Changes",
+                    "type": "command",
+                    "command": "git.stage"
+                },
+                {
+                    "key": "U",
+                    "name": "Unstage All Changes",
+                    "type": "command",
+                    "command": "git.unstageAll"
+                },
+                {
+                    "key": "t",
+                    "name": "TEST",
+                    "type": "command",
+                    "command": "git.diff.stageHunk"
+                },
+                /**
+                git.stageAll - stage all changes
+                git.diff.stageHunk - Git: Stage Block
+                git.stageChange - Git: Stage Change
+                git.stage - Git: Stage Changes
+                git.stageFile - Git: Stage Changes
+                git.diff.stageSelection - Git: Stage Selection
+                */
+            ]
+        },
+        {
+            "key": "h",
+            "name": "Split Horizontal",
+            "type": "command",
+            "command": "workbench.action.splitEditorDown"
+        },
+        {
+            "key": "s",
+            "name": "Insert Snippet",
+            "type": "command",
+            "command": "editor.action.insertSnippet"
+        },
+        {
+            "key": "n",
+            "name": "highlight",
+            "type": "command",
+            "command": "vscode-neovim.send",
+            "args": ":noh<CR>"
+        },
+        {
+            "key": "S",
+            "name": "Show...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "e",
+                    "name": "Show explorer",
+                    "type": "command",
+                    "command": "workbench.view.explorer"
+                },
+                {
+                    "key": "s",
+                    "name": "Show search",
+                    "type": "command",
+                    "command": "workbench.view.search"
+                },
+                {
+                    "key": "g",
+                    "name": "Show source control",
+                    "type": "command",
+                    "command": "workbench.view.scm"
+                },
+                {
+                    "key": "t",
+                    "name": "Show test",
+                    "type": "command",
+                    "command": "workbench.view.extension.test"
+                },
+                {
+                    "key": "r",
+                    "name": "Show remote explorer",
+                    "type": "command",
+                    "command": "workbench.view.remote"
+                },
+                {
+                    "key": "x",
+                    "name": "Show extensions",
+                    "type": "command",
+                    "command": "workbench.view.extensions"
+                },
+                {
+                    "key": "p",
+                    "name": "Show problem",
+                    "type": "command",
+                    "command": "workbench.actions.view.problems"
+                },
+                {
+                    "key": "o",
+                    "name": "Show output",
+                    "type": "command",
+                    "command": "workbench.action.output.toggleOutput"
+                },
+                {
+                    "key": "d",
+                    "name": "Show debug console",
+                    "type": "command",
+                    "command": "workbench.debug.action.toggleRepl"
+                }
+            ]
+        },
+        {
+            "key": "t",
+            "name": "UI toggles...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "a",
+                    "name": "Toggle tool/activity bar visibility",
+                    "type": "command",
+                    "command": "workbench.action.toggleActivityBarVisibility"
+                },
+                {
+                    "key": "F",
+                    "name": "Toggle full screen",
+                    "type": "command",
+                    "command": "workbench.action.toggleFullScreen"
+                },
+                {
+                    "key": "s",
+                    "name": "Select theme",
+                    "type": "command",
+                    "command": "workbench.action.selectTheme"
+                },
+            ]
+        },
+        {
+            "key": "v",
+            "name": "Split Vertical",
+            "type": "command",
+            "command": "workbench.action.splitEditor"
+        },
+        {
+            "key": "z",
+            "name": "Toggle zen mode",
+            "type": "command",
+            "command": "workbench.action.toggleZenMode"
+        }
+    ],
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": [
+                "-i",
+                "-l"
+            ]
+        },
+        "cmder": {
+            "path": "${env:windir}\\System32\\cmd.exe",
+            "args": [
+                "/k",
+                "C:\\tools\\cmder\\vendor\\bin\\vscode_init.cmd"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    // 2. VSCode shipped settings
+    "debug.javascript.autoAttachFilter": "disabled",
+	"editor.smoothScrolling": true,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 12,
+    "editor.rulers": [
+        100
+    ],
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.detectIndentation": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.classpath": true,
+        "**/.DS_Store": true,
+        "**/.factorypath": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.svn": true,
+        "**/*.class": true,
+        "**/CVS": true
+    },
+    "files.autoSave": "off",
+    "files.trimTrailingWhitespace": true,
+    "git.enableSmartCommit": true,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.gpuAcceleration": "off",
+    "workbench.colorCustomizations": {
+        "editorLineNumber.foreground": "#00a8b4"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.layoutControl.enabled": false,
+    "workbench.list.smoothScrolling": true,
+    "zenMode.hideLineNumbers": false,
+    // 2. Language-specific settings goes here
+    "java.autobuild.enabled": false,
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.configuration.maven.userSettings": "~/.m2/settings.xml",
+    "java.configuration.maven.globalSettings": "~/tools/apache-maven-3.9.6/conf/settings.xml",
+    "java.import.maven.offline.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "python.terminal.activateEnvironment": false,
+    "python.experiments.enabled": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[java]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "files.autoSave": "afterDelay", // Compile-lang, can auto save immediately
+        "files.autoSaveDelay": 500,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.defaultFormatter": "josevseb.google-java-format-for-vs-code",
+        "editor.formatOnSave": true
+    },
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnType": false
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.formatOnType": false
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        // 	"editor.defaultFormatter": "HookyQR.beautify" // 17/8/21 - disabeld to use VueJS-specific b/c VueJS is technically not HTML file.
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.tabSize": 4,
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // 3. Extensions related settings goes here
+    "json.schemas": [],
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.general.tags": [
+        "TODO",
+        "REFACTOR",
+        "CHORE",
+        "DOCS",
+        "FEAT",
+        "FIX",
+        "BUG",
+        "HACK",
+        "[ ]",
+        "[x]",
+        "[DO-NOT-PUSH]",
+        "NOTES"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    // "emeraldwalk.runonsave": {
+    //     "commands": [
+    //         {
+    //             "match": "\\.java$",
+    //             "cmd": "google-java-format --replace ${file}"
+    //         },
+    //     ],
+    // },
+    "redhat.telemetry.enabled": false,
+    // "workbench.editor.enablePreview": false,
+    "http.proxyStrictSSL": false,
+    "debug.focusWindowOnBreak": true,
+    "debug.focusEditorOnBreak": true,
+    "update.mode": "manual",
+    "extensions.autoCheckUpdates": false,
+    "git.openRepositoryInParentFolders": "always",
+    "security.workspace.trust.untrustedFiles": "open",
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.previewTheme": "monokai.css",
+
+}
